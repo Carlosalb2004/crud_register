@@ -17,6 +17,11 @@
         <title>Editar Cliente</title>
         
     </head>
+    <div>
+    <?php
+  include("home.php"); 
+    ?>
+  </div>
     <body>
         <div class="users-form">                                                                
             <form action="edit-clients.php" method="POST">                                              <!--creamos nuestro formulario para editar los datos de los clientes creados-->

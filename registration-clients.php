@@ -14,12 +14,13 @@
         <meta name=""viewport content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
     </head>
 <div>
+    <?php
+  include("home.php"); 
+    ?>
+</div>
+<div>
     <body>
-        <a href="home.php">Inicio</a>
-        <a href="registration.php">Registro de Usuarios</a>
-        <a href="registration-clients.php">Registro de Clientes</a> <!-- Falta hacer/ Ya esta echo-->
-        <a href="registration-service.php">Registro de Servicios</a>  <!-- Falta hacer-->
-        <a href="logout.php">Cerrar Sesion</a>
+        
     <div class="users-form">
         <form action="register-clients.php" method="POST"> 
             <br>
@@ -36,7 +37,7 @@
 </div>
 <div class="users-table">
     <br>
-    <h2>Usuarios registrados</h2>
+    <h2>Clientes registrados</h2>
     <br>
     <table>                     <!--creamos la tabla para mostrar los clientes creados-->
         <thead>

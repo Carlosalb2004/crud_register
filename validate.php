@@ -13,9 +13,9 @@ $result=$mysqli->query($query);
 
 if($result->num_rows==1){
     $_SESSION['user']=$username;
-    header('Location:home.php');
+    header('Location:dashboard.php');
 }
 else{
-    header('Location:html');
+    header('Location:login.html');
 }
 ?>

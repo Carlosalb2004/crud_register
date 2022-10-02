@@ -16,6 +16,11 @@
         <link href="style-service.css?ts=<?=time()?>" rel="stylesheet" type="text/css">
         <title>Editar Servicio</title>
     </head>
+    <div>
+    <?php
+  include("home.php"); 
+    ?>
+  </div>
     <body>
         <div class="users-form">
             <form action="edit-service.php" method="POST">  <!-- SE LLAMA AL ARCHIVO edit.php --> <!-- FALTA HACER /Ya esta echo  -->

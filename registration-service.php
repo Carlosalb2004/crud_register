@@ -13,14 +13,13 @@
         <meta name=""viewport content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
         <title>REGISTRO DE SERVICIOS</title>
     </head>
+    <div>
+    <?php
+  include("home.php"); 
+    ?>
+  </div>
 <div>
     <body>
-        <a href="home.php">Inicio</a>
-        <a href="registration.php">Registro de Usuarios</a>
-        <a href="registration-clients.php">Registro de Clientes</a> <!-- Falta hacer/ Ya esta echo-->
-        <a href="registration-service.php">Registro de Servicios</a>  <!-- Falta hacer-->
-        <a href="logout.php">Cerrar Sesion</a>
-        <!--Creacion de los campos ID, NOMBRE Y COSTO -->
         <div class="users-form">
         <form action="register-service.php" method="POST">
                 <h1>REGISTRO DE SERVICIOS</h1>

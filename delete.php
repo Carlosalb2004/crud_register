@@ -10,14 +10,14 @@
     {
         echo '<script language="javascript">';
         echo 'alert("Usuario eliminado");';
-        echo 'window.location="home.php";';
+        echo 'window.location="registration.php";';
         echo '</script>';
     }
     else
     {
         echo '<script language="javascript">';
         echo 'alert("Usuario no eliminado");';
-        echo 'window.location="home.php";';
+        echo 'window.location="registration.php";';
         echo '</script>';
     }
 ?>
