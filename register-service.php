@@ -9,13 +9,13 @@
 
     if(mysqli_query($mysqli, $sql)){
         echo '<script language="javascript">';
-        echo 'alert("Nuevo servicio agregado");';
+        
         echo 'window.location="registration-service.php";';
         echo '</script>';
     }
     else{
         echo '<script language="javascript">';
-        echo 'alert("Servicio no creado");';
+        
         echo 'window.location="registration-service.php";';
         echo '</script>';
     }

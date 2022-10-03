@@ -9,14 +9,14 @@
 
     if(mysqli_query($mysqli, $sql)){
         echo '<script language="javascript">';
-        echo 'alert("Servicio modificado");';
-        echo 'window.location="home.php";';
+        
+        echo 'window.location="registration-service.php";';
         echo '</script>';
     }
     else{
         echo '<script language="javascript">';
-        echo 'alert("Servicio no modificado");';
-        echo 'window.location="home.php";';
+        
+        echo 'window.location="registration-service.php";';
         echo '</script>';
     }
 ?>

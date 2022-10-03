@@ -18,20 +18,37 @@
     </head>
     <div>
     <?php
-  include("home.php"); 
+  include("header.php"); 
     ?>
   </div>
     <body>
         <div class="users-form">
             <form action="edit-service.php" method="POST">  <!-- SE LLAMA AL ARCHIVO edit.php --> <!-- FALTA HACER /Ya esta echo  -->
-                <h1>EDITAR DATOS DEL SERVICIO</h1>
+                <h1>Editar datos del Servicio</h1>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Ingrese los nuevos datos del servicio
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <input type="hidden" name="id" value="<?= $row['id']?>">
                 <p>Actualizar Nombre</p>
                 <input type="text" name="nombre" placeholder="Nombre" value="<?= $row['nombre']?>">
                 <p>Actualizar Costo</p>
                 <input type="text" name="costo" placeholder="Costo del Servicio" value="<?= $row['costo']?>">
-                <input type="submit" value="Actualizar">
+                <input type="submit" onclick="edit()" value="Actualizar">
             </form>
         </div>
+        <script>
+        function edit()
+        {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Cambios guardados',
+                html: 'Click para continuar',
+                timer: 4500
+                })
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>

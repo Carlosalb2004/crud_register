@@ -12,13 +12,13 @@ include("config.php");
 
     if(mysqli_query($mysqli, $sql)){                             //Usamos un condicinal para  aplicar la inserción para el ingreso de datos
         echo '<script language="javascript">';
-        echo 'alert("Nuevo usuario agregado");';
+        
         echo 'window.location="registration-clients.php";';
         echo '</script>';
     }
     else{                                                       //Un else si en caso no funciona la insercion
         echo '<script language="javascript">';
-        echo 'alert("Usuario no creado");';
+        
         echo 'window.location="registration-clients.php";';
         echo '</script>';
     }

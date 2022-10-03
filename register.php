@@ -15,13 +15,13 @@
 
     if(mysqli_query($mysqli, $sql)){
         echo '<script language="javascript">';
-        echo 'alert("Nuevo usuario agregado");';
+        
         echo 'window.location="registration.php";';
         echo '</script>';
     }
     else{
         echo '<script language="javascript">';
-        echo 'alert("Usuario no creado");';
+        
         echo 'window.location="registration.php";';
         echo '</script>';
     }

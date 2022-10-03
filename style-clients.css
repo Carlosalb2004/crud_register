@@ -2,8 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-align: left;
 }
-
+h2{
+    text-align: center;
+}
 html {
     
     font-family: 'Segoe UI', sans-serif;
@@ -11,7 +14,7 @@ html {
 }
 
 body{
-    background-image: url('Fondo3.png');
+    background-image: url('Fondo.png');
     background-size: 100vw 100vh;
     background-repeat:no-repeat;
     background-attachment: fixed;
@@ -61,12 +64,14 @@ a{
     background-color: white; 
     color: rgb(0, 0, 0); 
     border: 2px solid #60a100;
+    text-align: center;
 }
 
 .users-form form input[type=submit]:hover {
     background-color: #60a100;
     color: white;
     border-radius: 20px;
+    text-align: center;
 }
 
 .users-table table{                                     /* Estilo Tabla*/
@@ -92,6 +97,9 @@ table td{               /* edits en la seccion de los clientes*/
     padding: 16px;
     text-align: center;
     font-size: .85em;
+}
+table th{
+    text-align: center;
 }
 .users-table--edit{                                 /* Estilo Boton editar*/
     background: #2b4eea;

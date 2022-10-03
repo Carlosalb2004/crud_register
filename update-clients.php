@@ -19,13 +19,17 @@
     </head>
     <div>
     <?php
-  include("home.php"); 
+  include("header.php");
     ?>
   </div>
     <body>
         <div class="users-form">                                                                
             <form action="edit-clients.php" method="POST">                                              <!--creamos nuestro formulario para editar los datos de los clientes creados-->
-                <h1>Editar datos del Cliente</h1>                                                                                     
+                <h1>Editar datos del Cliente</h1>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Ingrese los nuevos datos del Cliente
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>                                                                                     
                 <input type="hidden" name="id" value="<?= $row['id']?>">
                 <p>Actualizar DNI</p>
                 <input type="text" name="dni" placeholder="Dni" value="<?= $row['dni']?>">
@@ -38,8 +42,21 @@
                 <p>Actualizar Email</p>
                 <input type="text" name="email" placeholder="Email" value="<?= $row['email']?>">      <!--Hasta aquí nuestro formulario para editar los datos de los clientes creados-->
 
-                <input type="submit" value="Actualizar">
+                <input type="submit" onclick="edit()" value="Actualizar">
             </form>
         </div>
+        <script>
+        function edit()
+        {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Cambios guardados',
+                html: 'Click para continuar',
+                timer: 4500
+                })
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>

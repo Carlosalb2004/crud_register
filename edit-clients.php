@@ -12,14 +12,14 @@
 
     if(mysqli_query($mysqli, $sql)){                      //Usamos un condicinal para  aplicar la inserción para la edicion 
         echo '<script language="javascript">';
-        echo 'alert("Usuario modificado");';
-        echo 'window.location="home.php";';
+        
+        echo 'window.location="registration-clients.php";';
         echo '</script>';
     }
     else{                                                   //Un else si en caso no funciona la insercion 
         echo '<script language="javascript">';
-        echo 'alert("Usuario no modificado");';
-        echo 'window.location="home.php";';
+        
+        echo 'window.location="registration-clients.php";';
         echo '</script>';
     }
 ?>

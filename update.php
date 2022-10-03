@@ -16,12 +16,16 @@
     </head>
     <div>
     <?php
-  include("home.php"); 
+  include("header.php"); 
     ?>
   </div>
     <body>
         <div class="users-form">                                                                
-            <form action="edit-users.php" method="POST">                                              <!--creamos nuestro formulario para editar los datos de los clientes creados-->
+            <form action="edit-users.php" method="POST"> 
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Ingrese los nuevos datos del Usuario
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>                                             <!--creamos nuestro formulario para editar los datos de los clientes creados-->
                 <?php
                     $result=mysqli_query($mysqli, "SELECT * FROM users WHERE username='$id'");
                     while($row=mysqli_fetch_array($result))
@@ -42,8 +46,21 @@
                         echo "<input type='password' name='password' value='{$row['password']}' required>";
                     }
                 ?>
-                <input type="submit" value="Actualizar">
+                <input type="submit" onclick="edit()" value="Actualizar">
             </form>
         </div>
+        <script>
+        function edit()
+        {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Cambios guardados',
+                html: 'Click para continuar',
+                timer: 4500
+                })
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>

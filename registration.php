@@ -23,7 +23,7 @@
     
 <div>
     <?php
-        include("home.php"); 
+        include("header.php"); 
     ?>
 </div>
 <div>
@@ -31,7 +31,6 @@
 
     <div class="users-form">
         <form action="register.php" method="POST">
-            <br>
             <h1>Ingresar datos del Usuario</h1>
             <input type="text" placeholder="Nombre" name="firstname" required>
             <input type="text" placeholder="Segundo Nombre" name="middlename" required>
@@ -39,9 +38,29 @@
             <input type="date" name="birthdate" required>
             <input type="text" placeholder="Usuario" name="username" required>
             <input type="password" placeholder="Contraseña" name="password" required>
-            <input type="submit" value="Registrar">
+            <input type="submit" onclick="add()" value="Agregar">
         </form> 
     </div> 
+    <script>
+        
+        function del()
+        {
+            Swal.fire(
+                'Usuario Eliminado',
+                'Click para continuar',
+                'success'
+                )
+        }
+        function add()
+        {
+            Swal.fire(
+                'Usuario Agregado',
+                'Click para continuar',
+                'success'
+                )
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </div>
 <div class="users-table">
@@ -64,14 +83,14 @@
         <tbody>
             <?php while ($row = mysqli_fetch_array($result)): ?>
                 <tr>
-                    <th><?= $row['firstname'] ?></th>
-                    <th><?= $row['middlename'] ?></th>
-                    <th><?= $row['last_name'] ?></th>
-                    <th><?= $row['birthday'] ?></th>
-                    <th><?= $row['username'] ?></th>
-                    <th><?= $row['password'] ?></th>
-                    <th><a href="update.php?id=<?= $row['username'] ?>" class="users-table--edit">Editar</a></th>     
-                    <th><a href="delete.php?id=<?= $row['username'] ?>" class="users-table--delete">Eliminar</a></th> 
+                    <td><?= $row['firstname'] ?></th>
+                    <td><?= $row['middlename'] ?></th>
+                    <td><?= $row['last_name'] ?></td>
+                    <td><?= $row['birthday'] ?></td>
+                    <td><?= $row['username'] ?></td>
+                    <td><?= $row['password'] ?></td>
+                    <td><a href="update.php?id=<?= $row['username'] ?>" class="users-table--edit">Editar</a></td>     
+                    <td><a onclick="del()" href="delete.php?id=<?= $row['username'] ?>" class="users-table--delete">Eliminar</a></td>
                 </tr>
             <?php endwhile; ?>
         </tbody>

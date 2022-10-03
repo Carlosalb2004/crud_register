@@ -15,7 +15,7 @@
     </head>
 <div>
     <?php
-  include("home.php"); 
+  include("header.php"); 
     ?>
 </div>
 <div>
@@ -23,16 +23,35 @@
         
     <div class="users-form">
         <form action="register-clients.php" method="POST"> 
-            <br>
                 <h1>Ingresar datos del Cliente</h1>
-                <input type="text" name="dni" placeholder="DNI" required>
-                <input type="text" name="name" placeholder="NOMBRE" required>
-                <input type="text" name="phone_number" placeholder="NUMERO TELEFONICO" required>
-                <input type="text" name="address" placeholder="DIRECCION" required>              
-                <input type="text" name="email" placeholder="EMAIL" required>           
-                <input type="submit" value="Agregar">
+                <input type="text" name="dni" placeholder="Dni" required>
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="text" name="phone_number" placeholder="Numero Telefonico" required>
+                <input type="text" name="address" placeholder="Direccion" required>              
+                <input type="text" name="email" placeholder="E-mail" required>           
+                <input type="submit" onclick="add()" value="Agregar">
         </form>
     </div>
+    <script>
+        
+        function del()
+        {
+            Swal.fire(
+                'Eliminado',
+                'Click para continuar',
+                'success'
+                )
+        }
+        function add()
+        {
+            Swal.fire(
+                'Cliente Agregado',
+                'Click para continuar',
+                'success'
+                )
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </div>
 <div class="users-table">
@@ -47,7 +66,7 @@
                 <th>NOMBRE</th>
                 <th>NUMERO DE TELEFONO</th>
                 <th>DIRECCION</th>
-                <th>EMAIL</th>
+                <th>E-MAIL</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -62,7 +81,7 @@
                     <td><?= $row['address'] ?></td>
                     <td><?= $row['email'] ?></td>
                     <td><a href="update-clients.php?id=<?= $row['id'] ?>" class="users-table--edit">Editar</a></td>     
-                    <td><a href="delete-clients.php?id=<?= $row['id'] ?>" class="users-table--delete">Eliminar</a></td> 
+                    <td><a onclick="del()" href="delete-clients.php?id=<?= $row['id'] ?>" class="users-table--delete">Eliminar</a></td> 
                 </tr>
             <?php endwhile; ?>
         </tbody>
