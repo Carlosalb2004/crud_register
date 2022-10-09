@@ -78,6 +78,18 @@ include("header.php");
                 <option>SI</option>
                 <option>NO</option>
             </datalist>
+            <input type="text" name="name_user" placeholder="Username quien registro" list="name_user">
+            <datalist id="name_user">
+                <option>
+                <?php 
+                    $sql="SELECT * FROM users";
+                    $query = mysqli_query($mysqli, $sql);
+
+                while ($row = mysqli_fetch_array($query)): ?>
+                        <option><?= $row['username'] ?></option>
+                <?php endwhile; ?>
+                </option>
+            </datalist>
             <input type="submit" onclick="add()" value="Agregar">
         </form> 
     </div>  
@@ -97,6 +109,7 @@ include("header.php");
                 <th>ID_SERVICIOS</th>
                 <th>MONTO</th>
                 <th>REALIZADO</th>
+                <th>USERNAME</th>
                 <th>FECHA/HORA</th>
                 
             </tr>
@@ -113,6 +126,7 @@ include("header.php");
                     <td><?= $row['id_s'] ?></td>
                     <td><?= $row['monto'] ?></td>
                     <td><?= $row['realizado'] ?></td>
+                    <td><?= $row['name_user'] ?></td>
                     <td><?= $row['fecha'] ?></td>
                     
                 </tr>             
