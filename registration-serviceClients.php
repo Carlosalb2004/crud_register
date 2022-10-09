@@ -71,7 +71,13 @@ include("header.php");
                 <?php endwhile; ?>
                 </option>
             </datalist>
+            
             <input type="text" placeholder="Monto" name="monto">
+            <input type="text" name="realizado" placeholder="Realizado" list="respuesta">
+            <datalist id="respuesta">
+                <option>SI</option>
+                <option>NO</option>
+            </datalist>
             <input type="submit" onclick="add()" value="Agregar">
         </form> 
     </div>  
@@ -90,7 +96,9 @@ include("header.php");
                 <th>ID_CLIENTES</th>
                 <th>ID_SERVICIOS</th>
                 <th>MONTO</th>
+                <th>REALIZADO</th>
                 <th>FECHA/HORA</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -104,7 +112,9 @@ include("header.php");
                     <td><?= $row['id_c'] ?></td>
                     <td><?= $row['id_s'] ?></td>
                     <td><?= $row['monto'] ?></td>
+                    <td><?= $row['realizado'] ?></td>
                     <td><?= $row['fecha'] ?></td>
+                    
                 </tr>             
             <?php endwhile; ?>
         </tbody>

@@ -5,9 +5,10 @@
     $id_c = $_POST['id_clients'];
     $id_s = $_POST['id_service'];
     $monto = $_POST['monto'];
+    $realizado = $_POST['realizado'];
     $fecha= date('Y-m-d H:i:s');
 
-    $sql="INSERT INTO serviceclients(id_sc,id_u,id_c,id_s,monto,fecha) VALUES('$id_sc','$id_u', '$id_c','$id_s','$monto','$fecha')";     /*CODIGO EN SQL QUE INGRESA EL ID, NOMBRE Y COSTO A LA BASE DE DATOS DENOMINADA servicios*/
+    $sql="INSERT INTO serviceclients(id_sc,id_u,id_c,id_s,monto,realizado,fecha) VALUES('$id_sc','$id_u', '$id_c','$id_s','$monto','$realizado','$fecha')";     /*CODIGO EN SQL QUE INGRESA EL ID, NOMBRE Y COSTO A LA BASE DE DATOS DENOMINADA servicios*/
 
     if(mysqli_query($mysqli, $sql)){
         echo '<script language="javascript">';
