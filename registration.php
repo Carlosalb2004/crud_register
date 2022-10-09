@@ -2,14 +2,8 @@
     //Registration-Users
     include("config.php");
     include("session.php");
-    $query="SELECT * FROM users";
-    $result=filterRecords($query);
-
-    function filterRecords($query){
-        include("config.php");
-        $filter_result=mysqli_query($mysqli, $query);
-        return $filter_result;
-    }
+    $sql = "SELECT * FROM users"; 
+    $query = mysqli_query($mysqli, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -70,6 +64,7 @@
     <table>                     <!--creamos la tabla para mostrar los clientes creados-->
         <thead>
             <tr>
+                <th>ID</th>
                 <th>NOMBRE</th>
                 <th>SEGUNDO NOMBRE</th>
                 <th>APELLIDO</th>
@@ -81,8 +76,9 @@
             </tr>
         </thead>
         <tbody>
-            <?php while ($row = mysqli_fetch_array($result)): ?>
+            <?php while ($row = mysqli_fetch_array($query)): ?>
                 <tr>
+                    <td><?= $row['id'] ?></td>
                     <td><?= $row['firstname'] ?></th>
                     <td><?= $row['middlename'] ?></th>
                     <td><?= $row['last_name'] ?></td>

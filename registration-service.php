@@ -11,13 +11,12 @@
         <title>Registro de Servicios</title>
         <link rel="stylesheet" href="style-service.css?ts=<?=time()?>">    <!--se llaman a los estilos en el archivo style.css-->
         <meta name=""viewport content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
-        <title>REGISTRO DE SERVICIOS</title>
     </head>
     <div>
     <?php
-  include("header.php"); 
+include("header.php"); 
     ?>
-  </div>
+</div>
 <div>
     <body>
         <div class="users-form">

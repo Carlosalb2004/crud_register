@@ -9,7 +9,6 @@
     if(mysqli_query($mysqli, $sql))
     {
         echo '<script language="javascript">';
-        
         echo 'window.location="registration.php";';
         echo '</script>';
     }

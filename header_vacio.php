@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" dir="rtl">
+<html lang="es" dir="ltr">
     <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -67,6 +67,12 @@
         <a href="registration-service.php" class="nav-link link-dark">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
           Registro de Servicios
+        </a>
+      </li>
+      <li>
+        <a href="registration-serviceClients.php" class="nav-link link-dark">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+          Registro de Servicios Clientes
         </a>
       </li>
     </ul>

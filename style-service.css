@@ -133,12 +133,9 @@ form
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-align: left;
+    
 }
 
-h2{
-    text-align: center;
-}
 html {
     
     font-family: 'Segoe UI', sans-serif;

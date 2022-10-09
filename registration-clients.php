@@ -12,15 +12,16 @@
         <title>Registro de Clientes</title>
         <link rel="stylesheet" type="text/css" href="style-clients.css?ts=<?=time()?>" />
         <meta name=""viewport content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+    
     </head>
-<div>
+    <div>
     <?php
-  include("header.php"); 
+include("header.php"); 
     ?>
-</div>
+</div>  
 <div>
     <body>
-        
+          
     <div class="users-form">
         <form action="register-clients.php" method="POST"> 
                 <h1>Ingresar datos del Cliente</h1>
