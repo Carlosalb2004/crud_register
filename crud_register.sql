@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2022 a las 05:51:55
+-- Tiempo de generación: 11-10-2022 a las 17:35:29
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -57,6 +57,7 @@ CREATE TABLE `serviceclients` (
   `id_s` int(200) NOT NULL,
   `monto` int(200) NOT NULL,
   `realizado` varchar(20) NOT NULL,
+  `name_user` varchar(200) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -64,8 +65,10 @@ CREATE TABLE `serviceclients` (
 -- Volcado de datos para la tabla `serviceclients`
 --
 
-INSERT INTO `serviceclients` (`id_sc`, `id_u`, `id_c`, `id_s`, `monto`, `realizado`, `fecha`) VALUES
-(17, 1, 33, 28, 300, 'SI', '2022-10-09 10:48:08');
+INSERT INTO `serviceclients` (`id_sc`, `id_u`, `id_c`, `id_s`, `monto`, `realizado`, `name_user`, `fecha`) VALUES
+(20, 18, 34, 28, 2000, 'SI', 'carlos', '2022-10-10 06:17:50'),
+(21, 18, 34, 27, 160, 'SI', 'josue', '2022-10-10 06:28:39'),
+(22, 17, 33, 26, 250, 'NO', 'carlos', '2022-10-10 06:31:48');
 
 -- --------------------------------------------------------
 
@@ -158,7 +161,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT de la tabla `serviceclients`
 --
 ALTER TABLE `serviceclients`
-  MODIFY `id_sc` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_sc` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `services`
